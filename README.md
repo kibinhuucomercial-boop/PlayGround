@@ -16,3 +16,13 @@
 - 👤 [Explore the creator's projects](https://go.ondev.store/kibinhuucomercial-boop).
 - 🌍 [Create with OMGithub](https://go.ondev.store/).
 <!-- omgithub:readme:end -->
+
+## Rainbow Rush 10
+
+Protótipo de plataforma 2D feito em HTML Canvas, sem dependências de build.
+
+- Abra `index.html` em um navegador ou sirva a pasta com um servidor estático.
+- Escolha uma das 10 cores e clique em **Começar corrida**.
+- Teclado: `←` / `→` para mover e `↑` para pular; em telas touch, use os botões na tela.
+- A tela de sala exibe 10 vagas, mas esta versão é local para um jogador. Multiplayer online real precisa de um serviço de salas/sincronização, não incluído neste projeto estático.
+

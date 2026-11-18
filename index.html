@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Rainbow Rush 10</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="game" aria-label="Jogo Rainbow Rush"></canvas>
+
+  <div id="hud" class="hud hidden">
+    <div class="brand-mini"><span>RAINBOW</span><b>RUSH</b></div>
+    <div class="race-info">
+      <div id="lapText">VOLTAS 1/3</div>
+      <div id="positionText">1º LUGAR</div>
+    </div>
+  </div>
+
+  <div id="countdown" class="countdown hidden"></div>
+  <div id="raceEnd" class="race-end hidden">
+    <div class="end-card"><small>VOCÊ CHEGOU!</small><h1>RACE<br><span>COMPLETE</span></h1><p>Mandou muito bem, piloto!</p><button id="replayBtn">CORRER DE NOVO</button><button id="lobbyBtn">VOLTAR À SALA</button></div>
+  </div>
+
+  <div id="lobby" class="lobby">
+    <header class="topbar">
+      <div class="brand"><span>RAINBOW</span><strong>RUSH</strong></div>
+      <div class="room-row">
+        <button id="soundBtn" class="icon-btn" aria-label="Som">♪</button>
+        <div class="room-code"><small>SALA</small><b id="roomCode"># RAIN-10</b></div>
+        <button id="copyBtn" class="icon-btn copy" aria-label="Copiar código">⧉</button>
+      </div>
+    </header>
+
+    <main class="lobby-main">
+      <section class="left-panel">
+        <div class="panel-title"><span class="live-dot"></span> JOGADORES <b id="playerCount">1/10</b></div>
+        <div id="playerList" class="player-list"></div>
+      </section>
+
+      <section class="hero-panel">
+        <div class="track-preview">
+          <div class="sun"></div>
+          <div class="cloud c1"></div><div class="cloud c2"></div>
+          <div class="mountains"></div>
+          <div class="track"><div class="road"></div></div>
+          <canvas id="previewCanvas"></canvas>
+        </div>
+        <div class="mode-card">
+          <div><small>MODO</small><b>ARCO-ÍRIS CUP</b></div>
+          <div><small>MAPA</small><b>PRAIA TURBO</b></div>
+        </div>
+      </section>
+
+      <section class="right-panel">
+        <div class="panel-title">SELEÇÃO</div>
+        <div id="colorGrid" class="color-grid"></div>
+        <button id="readyBtn" class="ready-btn"><span>PRONTO</span><small>COMEÇAR CORRIDA</small></button>
+      </section>
+    </main>
+
+    <div id="touchHint" class="touch-hint">Use ← → para acelerar e virar · ↑ para saltar</div>
+  </div>
+
+  <div id="mobileControls" class="mobile-controls hidden">
+    <div class="dpad">
+      <button data-control="left" aria-label="Esquerda">◀</button>
+      <button data-control="right" aria-label="Direita">▶</button>
+    </div>
+    <button class="jump" data-control="jump" aria-label="Pular">A</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
